@@ -7,7 +7,7 @@ const { findAll } = require("../../models/Tag");
 // get all products
 router.get("/", (req, res) => {
   // find all products
-  Products.findAll({
+  Product.findAll({
     // be sure to include its associated Category and Tag data
     include: [
       Category,
