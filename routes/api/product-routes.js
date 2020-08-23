@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
-const { findAll } = require("../../models/Tag");
+// const { findAll } = require("../../models/Tag");
 
 // The `/api/products` endpoint
 
@@ -45,7 +45,7 @@ router.get("/:id", (req, res) => {
       res.status(404).json({ message: "No product exist with this id"});
       return;
     }
-    res.json(dbProductData);
+    res.json(product);
   })
   .catch((err) => {
     console.log(err);
